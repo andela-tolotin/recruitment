@@ -378,5 +378,3 @@
 	<!--//testimonial-->
 @include('includes.contactform')
 @include('includes.footer')
-
-
