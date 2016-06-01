@@ -2,8 +2,6 @@
 
 namespace HumanResources\Http\Requests;
 
-use Auth;
-
 class UserSignupRequest extends Request
 {
     /**

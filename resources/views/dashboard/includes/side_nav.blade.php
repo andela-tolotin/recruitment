@@ -28,7 +28,7 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-th-list"></i>
-          <span>Add Other Information</span>
+          <span>Other Info</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">

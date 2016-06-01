@@ -5,6 +5,7 @@
         <title>@yield('title')</title>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
+        @include('sweet::alert')
         <div class="wrapper">
             @include('dashboard.includes.top_nav')
             @include('dashboard.includes.side_nav')

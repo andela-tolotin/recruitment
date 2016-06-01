@@ -33,19 +33,23 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['web', 'auth']], functi
         return view('dashboard.pages.view_myprofile');
     });
 
-    Route::get('/academic/add', function () {
-        return view('dashboard.pages.add_academic');
-    });
+    Route::get('/work/add', 'WorkExperienceController@getMyWorkExperience');
+    Route::get('/academic/add', 'AcademicController@getMyAcademicQualifications');
+
+    Route::get('/academic/edit/{id}', 'AcademicController@editMyAcademicProfile');
+    Route::post('/academic/update/{id}', 'AcademicController@updateMyAcademicProfile');
+    Route::get('/academic/delete/{id}', 'AcademicController@deleteMyAcademicProfile');
+    Route::get('/skill/add', 'SkillController@getMySkills');
+
+    Route::post('/academic/create', 'AcademicController@store');
+    Route::post('/work/create', 'WorkExperienceController@store');
+    Route::post('/skill/create', 'SkillController@store');
 
     Route::get('/logout', 'Auth\AuthController@logUserOut');
-
-    Route::post('/profile/update', [
-        'uses' => 'UserController@updateProfile',
-    ]);
-
-    Route::post('/picture/update', [
-        'uses' => 'UserController@updateAvatar',
-    ]);
+    Route::post('/profile/update', 'UserController@updateProfile');
+    Route::post('/picture/update', 'UserController@updateAvatar');
 
     Route::auth();
+
+
 });

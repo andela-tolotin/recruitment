@@ -28,8 +28,41 @@
         <input id="grade" type="text" class="validate form-control" name ="grade" value="{{ old('grade')}}" placeholder="Grade">
       </div>
       <div class="form-group">
-        <button class="btn btn-lg btn-primary" type="submit" name="action">Create</button>
+        <button class="btn btn-primary" type="submit" name="action">Create</button>
       </div>
     </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    @if ($academics->count() > 0)
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td>SN</td>
+          <td>Institution</td>
+          <td>Qualification</td>
+          <td>Grade</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($academics as $index => $academic)
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ ucwords($academic->institution) }}</td>
+          <td>{{ ucwords($academic->qualification) }}</td>
+          <td>{{ ucwords($academic->grade) }}</td>
+         <td><a href="/dashboard/academic/edit/{{ $academic->id }}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit </a> </td>
+            <td><a href="/dashboard/academic/delete/{{ $academic->id }}"> <i class="fa fa-trash" aria-hidden="true"></i> Remove </a>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+    @else
+    <h6>No academic record added yet</h6>
+    @endif
   </div>
 </div>

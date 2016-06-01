@@ -2,7 +2,7 @@
 
 namespace HumanResources\Http\Requests;
 
-class AcademicRequest extends Request
+class WorkRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,11 @@ class AcademicRequest extends Request
     public function rules()
     {
         return [
-            'qualification' => 'required|max:50',
-            'institution'   => 'required|max:50',
-            'start-date'    => 'required|max:13',
-            'end-date'      => 'required|max:13',
-            'grade'         => 'required|max:20',
+            'company'         => 'required',
+            'position'        => 'required',
+            'start-date'      => 'required',
+            'end-date'        => 'required',
+            'job-description' => 'required'
         ];
     }
 }
