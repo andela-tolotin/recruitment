@@ -39,4 +39,15 @@ class WorkExperienceController extends Controller
 
         return view('dashboard.pages.add_work_experience', compact('workExperience'));
     }
+
+    public function editWorkExperience($id)
+    {
+        $workExperience = WorkExperience::find($id);
+
+        if (is_null($workExperience)) {
+            abort(404);
+        }
+
+        return view('dashboard.pages.view_work_experience', compact('workExperience'));
+    }
 }

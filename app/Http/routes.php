@@ -34,6 +34,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['web', 'auth']], functi
     });
 
     Route::get('/work/add', 'WorkExperienceController@getMyWorkExperience');
+    Route::get('/work/edit/{id}', 'WorkExperienceController@editWorkExperience');
     Route::get('/academic/add', 'AcademicController@getMyAcademicQualifications');
 
     Route::get('/academic/edit/{id}', 'AcademicController@editMyAcademicProfile');

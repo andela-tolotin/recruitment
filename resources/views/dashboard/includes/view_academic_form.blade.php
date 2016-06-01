@@ -28,7 +28,7 @@
         <input id="grade" type="text" class="validate form-control" name ="grade" value="{{ $academic->grade }}" placeholder="Grade">
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit" name="action">Update</button>
+        <button class="btn btn-primary" type="submit" name="action">Create</button>
       </div>
     </form>
   </div>
