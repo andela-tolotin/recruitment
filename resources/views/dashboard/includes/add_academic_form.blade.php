@@ -16,7 +16,7 @@
         </select>
       </div>
       <div class="form-group">
-        <input id="institution" type="date" class="validate form-control" value="{{ old('institution')}}" name="institution" placeholder="Institution">
+        <input id="institution" type="text" class="validate form-control" value="{{ old('institution')}}" name="institution" placeholder="Institution">
       </div>
       <div class="form-group">
         <input id="start-date" type="date" class="validate form-control" value="{{ old('start-date')}}" name="start-date" placeholder="Start Date">

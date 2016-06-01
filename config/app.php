@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -149,6 +149,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -205,6 +206,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Cloudder'  => JD\Cloudder\Facades\Cloudder::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

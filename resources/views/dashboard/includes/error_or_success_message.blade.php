@@ -1,5 +1,5 @@
 <div class="row">
- <div class="col-md-6">
+ <div class="col-md-12">
   @if (session('status') == 'Oops! unauthorized access to video!')
    <div class="text-danger">
     <strong> {{ session('status') }}</strong>
