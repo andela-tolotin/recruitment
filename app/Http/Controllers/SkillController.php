@@ -36,5 +36,46 @@ class SkillController extends Controller
         return view('dashboard.pages.add_skill', compact('skills'));
     }
 
-    public function 
+    public function editSkill($id)
+    {
+        $skill = Skill::find($id);
+
+        if (!is_null($skill)) {
+            return view('dashboard.pages.view_skill', compact('skill'));
+        }
+
+        abort(404);
+    }
+
+    public function updateSkill($id, SkillRequest $request)
+    {
+        $skill = Skill::find($id);
+
+        if (!is_null($skill)) {
+            $skill->update([
+                'user_id'    => Auth::user()->id,
+                'name'       => $request->input('skill'),
+            ]);
+
+            Alert::success('Skill updated ', 'Operation');
+
+            return redirect('/dashboard/skill/add');
+        }
+
+        abort(404);
+    }
+
+    public function deleteSkill($id) {
+        $skill = Skill::find($id);
+
+        if (!is_null($skill)) {
+            $skill->delete();
+
+            Alert::success('Skill deleted ', 'Operation');
+
+            return redirect('/dashboard/skill/add');
+        }
+
+        abort(404);
+    }
 }

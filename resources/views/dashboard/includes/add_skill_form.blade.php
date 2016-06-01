@@ -5,7 +5,7 @@
     <form class="form" method="POST" action="/dashboard/skill/create">
       {{ csrf_field() }}
       <div class="form-group">
-        <input id="skill" type="date" class="validate form-control" value="{{ old('skill')}}" name="skill" placeholder="Skill e.g Microsoft Word">
+        <input id="skill" type="text" class="validate form-control" value="{{ old('skill')}}" name="skill" placeholder="Skill e.g Microsoft Word">
       </div>
       <div class="form-group">
         <button class="btn  btn-primary" type="submit" name="action">Create</button>
