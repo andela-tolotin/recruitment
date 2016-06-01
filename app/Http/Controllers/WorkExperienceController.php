@@ -2,6 +2,8 @@
 
 namespace HumanResources\Http\Controllers;
 
+use PDF;
+use App;
 use Auth;
 use Alert;
 use Illuminate\Http\Request;
@@ -84,5 +86,14 @@ class WorkExperienceController extends Controller
         $workExperience->delete();
 
         return redirect('/dashboard/work/add');
+    }
+
+    public function downloadCV()
+    {
+        // $pdf = PDF::loadView('dashboard.pages.download_cv');
+        // return $pdf->download('cv.pdf');
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('dashboard.includes.view_applicant_cv');
+        return $pdf->stream();
     }
 }

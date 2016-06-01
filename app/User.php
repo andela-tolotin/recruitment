@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('HumanResources\Academic');
     }
+
+    public function experiences()
+    {
+        return $this->hasMany('HumanResources\WorkExperience');
+    }
 }

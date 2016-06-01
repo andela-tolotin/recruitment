@@ -35,6 +35,7 @@
          <li><a href="/dashboard/academic/add"><i class="fa fa-circle-o"></i> Add Academic Profile</a></li>
          <li><a href="/dashboard/work/add"><i class="fa fa-circle-o"></i> Add Work Experience</a></li>
          <li><a href="/dashboard/skill/add"><i class="fa fa-circle-o"></i> Add Skill</a></li>
+         <li><a href="/dashboard/download/cv"><i class="fa fa-circle-o"></i> Download CV</a></li>
         </ul>
       </li>
       
