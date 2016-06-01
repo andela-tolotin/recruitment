@@ -5,7 +5,7 @@
     <form class="form" method="POST" action="/dashboard/work/create">
       {{ csrf_field() }}
       <div class="form-group">
-        <input id="company" type="date" class="validate form-control" value="{{ old('company')}}" name="company" placeholder="Company">
+        <input id="company" type="text" class="validate form-control" value="{{ old('company')}}" name="company" placeholder="Company">
       </div>
       <div class="form-group">
         <input id="position" type="text" class="validate form-control" name ="position" value="{{ old('position')}}" placeholder="Position">

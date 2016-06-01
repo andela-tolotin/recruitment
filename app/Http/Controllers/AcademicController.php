@@ -60,7 +60,7 @@ class AcademicController extends Controller
         $academic = Academic::find($id);
 
         if (is_null($academic)) {
-            alert()->error('Academic details failed to add ', 'Operation');
+            alert()->error('Academic details failed to delete ', 'Operation');
         }
 
         $academic->delete();
@@ -88,7 +88,6 @@ class AcademicController extends Controller
         return redirect('/dashboard/academic/add');
         }
 
-        abort(404);
     }
 
     public function getAcademicInfo()

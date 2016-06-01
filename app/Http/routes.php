@@ -35,8 +35,10 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['web', 'auth']], functi
 
     Route::get('/work/add', 'WorkExperienceController@getMyWorkExperience');
     Route::get('/work/edit/{id}', 'WorkExperienceController@editWorkExperience');
+    Route::post('/work/update/{id}', 'WorkExperienceController@updateWorkExperience');
+    Route::get('/work/delete/{id}', 'WorkExperienceController@deleteWorkExperience');
+    
     Route::get('/academic/add', 'AcademicController@getMyAcademicQualifications');
-
     Route::get('/academic/edit/{id}', 'AcademicController@editMyAcademicProfile');
     Route::post('/academic/update/{id}', 'AcademicController@updateMyAcademicProfile');
     Route::get('/academic/delete/{id}', 'AcademicController@deleteMyAcademicProfile');
