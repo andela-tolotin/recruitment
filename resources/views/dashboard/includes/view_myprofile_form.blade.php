@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-7">
     <h4>My Profile</h4>
     <form class="form" method="POST" action="/dashboard/profile/update">
       {{ csrf_field() }}
@@ -84,31 +84,27 @@
         <textarea id="address" class="form-control" name="address" placeholder="Address ">{{ Auth::user()->otherinfo->address }}</textarea>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit" name="action">Update
-        <i class="material-icons right">update</i>
-        </button>
+        <button class="btn btn-primary" type="submit" name="action">Update</button>
       </div>
     </form>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-5">
     <h4>Change Picture</h4>
     <form class="form" method="POST" action="/dashboard/picture/update" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
         <img src="{{ Auth::user()->picture_url }}" title="myprofile" alt="myprofile" class="img-circle my-pix">
       </div>
-      <div class="form-group">
-        <input id="picture_url" type="file" class="validate form-control" name="picture_url">
+      <div class="input-group">
+        <input id="picture_url" type="file" class="form-control" name="picture_url">
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit" name="action">Upload
-        <i class="material-icons right">offline_pin</i>
-        </button>
+        <button class="btn btn-primary" type="submit" name="action">Upload</button>
       </div>
     </form>
     <h4>Upload CV</h4>
     <form method="POST" enctype="multipart/form-data" action="/dashboard/upload/cv">
-    {{ csrf_field() }}
+      {{ csrf_field() }}
       <div class="input-group">
         <input id="app_cv" type="file" class="form-control" name="app_cv">
       </div>
@@ -121,8 +117,8 @@
     </form>
     <br/>
     <h4>My CV Preview</h4>
-     <a href="{{ Auth::user()->cv_url }}" target="_blank" title="{{ Auth::user()->username }}">
-     {{ Auth::user()->username }}
-     </a>
+    <a href="{{ Auth::user()->cv_url }}" target="_blank" title="{{ Auth::user()->username }}">
+      {{ Auth::user()->username }} 's CV
+    </a>
   </div>
 </div>
