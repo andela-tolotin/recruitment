@@ -58,4 +58,6 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth']], function () {
     Route::post('/profile/update', 'UserController@updateProfile');
     Route::post('/picture/update', 'UserController@updateAvatar');
 
+    Route::post('/upload/cv', 'FileUploaderController@uploadFileToLocalStorage');
+
 });

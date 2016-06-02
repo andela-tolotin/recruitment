@@ -77,7 +77,6 @@
           <option>ZAMFARA</option>
         </select>
       </div>
-
       <div class="form-group">
         <input id="city" type="text" class="validate form-control" value="{{ Auth::user()->otherinfo->city }}" name="city" placeholder="City">
       </div>
@@ -104,6 +103,19 @@
       <div class="form-group">
         <button class="btn btn-primary" type="submit" name="action">Upload
         <i class="material-icons right">offline_pin</i>
+        </button>
+      </div>
+    </form>
+    <h4>Upload CV</h4>
+    <form method="POST" enctype="multipart/form-data" action="/dashboard/upload/cv">
+    {{ csrf_field() }}
+      <div class="input-group">
+        <input id="app_cv" type="file" class="form-control" name="app_cv">
+      </div>
+      <br/>
+      <div class="input-group">
+        <button class="btn btn-primary" type="submit" name="action">Upload
+        <i class="glyphicon glyphicon-cloud-upload"></i>
         </button>
       </div>
     </form>
