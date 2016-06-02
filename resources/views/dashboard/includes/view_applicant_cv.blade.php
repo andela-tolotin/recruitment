@@ -61,7 +61,7 @@ thead {
                 <td><strong>Date of Birth</strong> : {{ Auth::user()->otherinfo->dateofbirth ? : 'NILL' }} </td>
                  <td><strong>Address</strong> : {{ Auth::user()->otherinfo->address ? : 'NILL' }} </td>
                  <td></td>
-                 <td> </td>
+                 <td></td>
                </tr>
             </tbody>
         </table>
