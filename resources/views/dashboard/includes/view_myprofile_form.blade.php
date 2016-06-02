@@ -119,5 +119,10 @@
         </button>
       </div>
     </form>
+    <br/>
+    <h4>My CV Preview</h4>
+     <a href="{{ Auth::user()->cv_url }}" target="_blank" title="{{ Auth::user()->username }}">
+     {{ Auth::user()->username }}
+     </a>
   </div>
 </div>
