@@ -2,9 +2,11 @@
 
 namespace HumanResources\Http\Controllers;
 
+use Auth;
 use File;
 use Storage;
 use Validator;
+use HumanResources\User;
 use Illuminate\Http\Request;
 use HumanResources\Http\Requests;
 use HumanResources\Http\Requests\CVUploadRequest;
@@ -19,7 +21,12 @@ class FileUploaderController extends Controller
         $uploaded = $this->uploadToAws($filename, $file);  // Upload to aws 
 
         if ($uploaded) {
-            return redirect('/dashboard/profile')->with('success', $filename);
+            User::where('id', Auth::user()->id)
+            ->update([
+                'cv_url' => 'https://s3-us-west-2.amazonaws.com/laztopaz/cv/'.$filename,
+            ]);
+
+            return redirect('/dashboard/profile')->with('success', 'Your CV was upload successfully');
         }
 
          return redirect('/dashboard/profile')->with('error', 'Oops! something went wrong!');
