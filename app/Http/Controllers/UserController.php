@@ -71,7 +71,7 @@ class UserController extends Controller
         $imageUrl = $this->handleCloudinaryFileUpload($request);
 
         if (filter_var($imageUrl, FILTER_VALIDATE_URL)) {
-            $user = User::where('id', '=', Auth::user()->id)
+            $user = User::where('id', Auth::user()->id)
             ->update(['picture_url' => $imageUrl]);
 
             return redirect('/dashboard/profile')
