@@ -103,4 +103,13 @@ class UserController extends Controller
 
         return  Cloudder::getResult()['url'];
     }
+
+    public function viewAllApplicant()
+    {
+        $users = User::orderBy('id', 'desc')
+        ->where('role_id', 1)
+        ->paginate(20);
+
+        return view('dashboard.pages.view_all_applicants', compact('users'));
+    }
 }

@@ -84,7 +84,7 @@ class AcademicController extends Controller
             'start-date'    => $request->input('start-date'),
             'end-date'      => $request->input('end-date'),
         ])) {
-            alert()->success('Academic details updated ');
+        alert()->success('Academic details updated ');
         return redirect('/dashboard/academic/add');
         }
 

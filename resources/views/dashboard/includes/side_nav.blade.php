@@ -24,11 +24,10 @@
           <li><a href="/"><i class="fa fa-circle-o"></i> Homepage</a></li>
         </ul>
       </li>
-      
       <li class="treeview">
         <a href="#">
           <i class="fa fa-th-list"></i>
-          <span>Other Info</span>
+          <span>Add others</span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
@@ -38,16 +37,15 @@
          <li><a href="/dashboard/download/cv"><i class="fa fa-circle-o"></i> Download CV</a></li>
         </ul>
       </li>
-      
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-video-camera"></i> <span>My Videos </span>
+          <i class="fa fa-video-camera"></i> <span>Admin Panel </span>
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li><a href="/dashboard/video/add"><i class="fa fa-circle-o"></i> Add video</a></li>
-          <li><a href="/dashboard/video/view"><i class="fa fa-circle-o"></i> View Videos</a></li>
-          <li><a href="/dashboard/video/favourites"><i class="fa fa-circle-o"></i> Favourite Videos</a></li>
+          <li><a href="/dashboard/view/applicants"><i class="fa fa-circle-o"></i>View all applicants</a></li>
+          <li><a href="/dashboard/add/interview"><i class="fa fa-circle-o"></i>Set Interview dates</a></li>
+          <li><a href="/dashboard/video/favourites"><i class="fa fa-circle-o"></i>Set Interview criteria</a></li>
         </ul>
       </li>
     </ul>

@@ -35,6 +35,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth']], function () {
     });
 
     Route::get('/download/cv', 'WorkExperienceController@downloadCV');
+    Route::get('/view/applicants', 'UserController@viewAllApplicant');
     
     Route::post('/work/create', 'WorkExperienceController@store');
     Route::post('/work/update/{id}', 'WorkExperienceController@updateWorkExperience');
