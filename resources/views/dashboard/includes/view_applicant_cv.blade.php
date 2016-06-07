@@ -32,7 +32,7 @@ tr:nth-child(even) {
 
 thead {
     background-color: #3c8dbc;
-    color: white;
+    color: #777;
 }
 </style>
 
