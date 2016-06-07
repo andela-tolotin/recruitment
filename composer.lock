@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82c4ac4d48e23a0b1bd83c8df8c85fb3",
-    "content-hash": "f63c532fe373d66cd1549c8af083c377",
+    "hash": "2db73ba6ac22c6795f82412a17bef54e",
+    "content-hash": "98e1585067a488894a1eeb6e3e857ba3",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2357,6 +2357,52 @@
             "time": "2016-04-25 11:17:47"
         },
         {
+            "name": "uxweb/sweet-alert",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxweb/sweet-alert.git",
+                "reference": "b22ba7c206c6f39c98d438ff1587b41f7571d917"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/b22ba7c206c6f39c98d438ff1587b41f7571d917",
+                "reference": "b22ba7c206c6f39c98d438ff1587b41f7571d917",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+                },
+                "files": [
+                    "src/SweetAlert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uziel Bueno",
+                    "email": "ux.webs@gmail.com"
+                }
+            ],
+            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+            "keywords": [
+                "alert",
+                "laravel",
+                "sweet"
+            ],
+            "time": "2016-05-29 03:32:56"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.2.1",
             "source": {
@@ -3630,52 +3676,6 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-05-26 21:46:24"
-        },
-        {
-            "name": "uxweb/sweet-alert",
-            "version": "1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/uxweb/sweet-alert.git",
-                "reference": "b22ba7c206c6f39c98d438ff1587b41f7571d917"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/b22ba7c206c6f39c98d438ff1587b41f7571d917",
-                "reference": "b22ba7c206c6f39c98d438ff1587b41f7571d917",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/session": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
-                },
-                "files": [
-                    "src/SweetAlert/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Uziel Bueno",
-                    "email": "ux.webs@gmail.com"
-                }
-            ],
-            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
-            "keywords": [
-                "alert",
-                "laravel",
-                "sweet"
-            ],
-            "time": "2016-05-29 03:32:56"
         }
     ],
     "aliases": [],
