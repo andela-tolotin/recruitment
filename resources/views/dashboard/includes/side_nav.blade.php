@@ -44,8 +44,8 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="/dashboard/view/applicants"><i class="fa fa-circle-o"></i>View all applicants</a></li>
-          <li><a href="/dashboard/add/interview"><i class="fa fa-circle-o"></i>Set Interview dates</a></li>
-          <li><a href="/dashboard/video/favourites"><i class="fa fa-circle-o"></i>Set Interview criteria</a></li>
+          <li><a href="/dashboard/interview/add"><i class="fa fa-circle-o"></i>Set Interview dates</a></li>
+          <li><a href="/dashboard/interview-criteria/add"><i class="fa fa-circle-o"></i>Set Interview criteria</a></li>
         </ul>
       </li>
     </ul>

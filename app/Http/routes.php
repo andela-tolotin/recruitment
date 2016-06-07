@@ -55,6 +55,18 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth']], function () {
     Route::get('/skill/edit/{id}', 'SkillController@editSkill');
     Route::get('/skill/delete/{id}', 'SkillController@deleteSkill');
 
+    Route::get('/interview/add', 'InterviewController@index');
+    Route::post('/interview/create', 'InterviewController@store');
+    Route::get('/interview/edit/{id}', 'InterviewController@edit');
+    Route::post('/interview/update/{id}', 'InterviewController@update');
+    Route::get('/interview/delete/{id}', 'InterviewController@delete');
+
+    Route::get('/interview-criteria/add', 'InterviewCriteriaController@index');
+    Route::post('/interview-criteria/create', 'InterviewCriteriaController@store');
+    Route::get('/interview-criteria/edit/{id}', 'InterviewCriteriaController@edit');
+    Route::post('/interview-criteria/update/{id}', 'InterviewCriteriaController@update');
+    Route::get('/interview-criteria/delete/{id}', 'InterviewCriteriaController@delete');
+
     Route::get('/logout', 'Auth\AuthController@logUserOut');
     Route::post('/profile/update', 'UserController@updateProfile');
     Route::post('/picture/update', 'UserController@updateAvatar');

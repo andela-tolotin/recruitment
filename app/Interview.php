@@ -9,5 +9,12 @@ class Interview extends Model
     protected $fillable = [
         'date',
         'code',
+        'type',
+        'description',
     ];
+
+    public function interviewCriterias()
+    {
+        return $this->hasMany('HumanResources\InterviewCriteria');
+    }
 }

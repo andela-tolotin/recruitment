@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('HumanResources\WorkExperience');
     }
+
+    public function interviewInvite()
+    {
+        return $this->hasOne('HumanResources\InterviewInvitee');
+    }
 }
